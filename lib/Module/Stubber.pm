@@ -64,7 +64,7 @@ package Module::Stubber;
 use strict;
 use warnings;
 our %Status;
-our $VERSION = 0.01;
+our $VERSION = '0.01-2';
 
 my $USAGE_ERR = sprintf("Usage: use %s ".
     "Pkg::Name => [ 'import', 'options' ], extra => 'options'",
@@ -89,6 +89,7 @@ sub import {
     } else {
         warn(__PACKAGE__ . ": ".$@);
         $Status{$wanted_pkg} = 0;
+        $INC{$pkg_s} = 1;
         no strict 'refs';
         @{$wanted_pkg . '::ISA'} = 'Module::Stubber::Stub';
         my $more_syms = $options{will_use};
