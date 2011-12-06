@@ -5,5 +5,5 @@ README
 lib/Module/Stubber.pm
 t/00-all.t
 t/goodmodule.pm
-
+t/noimport.pm
 META.yml                                 Module meta-data (added by MakeMaker)
