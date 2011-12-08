@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Module-Stubber
-version:            0.02
+version:            0.03
 abstract:           Import possibly unavailable modules and their exported symbols
 author:
     - M. Nunberg <mnunberg@haskalah.org>
@@ -11,6 +11,7 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
+    Dir::Self:   0
     Exporter:    0
     Test::More:  0
 no_index:
